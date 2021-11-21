@@ -1,9 +1,0 @@
-{
-    "reviews": [
-        {
-            "firstName": "Test",
-            "lastName": "Test",
-            "comment": "This is a test comment"
-        }
-    ]
-}

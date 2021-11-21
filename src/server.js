@@ -36,9 +36,6 @@ const root = {
             database: 'testimonials'
         })
         const [rows] = await connection.execute('SELECT firstName, lastName, comment FROM reviews')
-        console.log(rows)
-        console.log("rows")
-       
         return rows 
     },
     getReview: async (args) => {
@@ -50,7 +47,6 @@ const root = {
             database: 'testimonials',
         })
         const [rows] = await connection.execute('SELECT firstName, lastName, comment FROM `reviews` WHERE `id` = ?', [args.id])
-        console.log(rows)
         return rows[0] 
     },
     createReview: async (args) => { 
@@ -62,9 +58,9 @@ const root = {
             password: 'password',
             database: 'testimonials',
         })
-        const [rows] = await connection.execute('INSERT INTO reviews(firstName, lastName, comment, secretKey) VALUES (?, ?, ?, "test")', [firstName, lastName, comment])
-        console.log(rows)
-        return rows[0]
+        await connection.execute('INSERT INTO reviews(firstName, lastName, comment, secretKey) VALUES (?, ?, ?, "test")', [firstName, lastName, comment])
+        const input = [ { firstName, lastName, comment} ]
+        return input[0]
     }
 }
 
