@@ -1,46 +1,40 @@
 {
-  "name": "client",
-  "version": "0.1.0",
+  "name": "vue-black-dashboard",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "bootstrap": "5.1.3",
-    "react": "^17.0.2",
-    "react-bootstrap": "^2.0.2",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "^6.0.2",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
-  },
+  "description": "A sample admin dashboard based on black dashboard UI template",
+  "author": "cristian.jora <joracristi@gmail.com>",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "e2e": "node test/e2e/runner.js",
+    "lint": "vue-cli-service lint",
+    "dev": "vue-cli-service serve --open",
+    "lint-fix": "vue-cli-service lint --fix"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "register-service-worker": "^1.7.1",
+    "vue": "^2.6.11",
+    "vue-chartjs": "^3.5.0",
+    "vue-i18n": "^8.18.2",
+    "vue-router": "^3.3.4",
+    "vue-router-prefetch": "^1.6.0",
+    "vue2-transitions": "^0.3.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.4.6",
+    "@vue/cli-plugin-eslint": "^4.4.6",
+    "@vue/cli-plugin-pwa": "^4.4.6",
+    "@vue/cli-service": "^4.4.6",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "vue-cli-plugin-i18n": "^1.0.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 11"
+  ]
 }
